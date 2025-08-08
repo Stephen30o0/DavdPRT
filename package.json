@@ -1,0 +1,72 @@
+{
+  "name": "palmwine-papi-portfolio",
+  "version": "1.0.0",
+  "description": "The multidisciplinary world of Oghenefejiro David Obaro-Umeh — Creative Director, A&R, Entrepreneur — unfolding in a Nigerian Alte aesthetic.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/",
+    "dev": "live-server --port=3000 --open=/ --watch=styles,js",
+    "build": "npm run optimize-images && npm run minify-css && npm run minify-js",
+    "optimize-images": "imagemin assets/images/*.{jpg,png,gif} --out-dir=dist/assets/images",
+    "minify-css": "cleancss -o dist/styles/main.min.css styles/*.css",
+    "minify-js": "uglifyjs js/*.js -o dist/js/main.min.js",
+    "serve": "python -m http.server 3000",
+    "lint": "eslint js/**/*.js",
+    "format": "prettier --write \"**/*.{html,css,js,md}\"",
+    "validate": "html-validate index.html",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "keywords": [
+    "portfolio",
+    "creative-director",
+    "a&r",
+    "entrepreneur",
+    "nigerian-alte",
+    "david-obaro-umeh",
+    "palmwine-papi",
+    "mowalola",
+    "lagos",
+    "creative",
+    "fashion",
+    "music"
+  ],
+  "author": {
+    "name": "David Obaro Umeh",
+    "email": "david@palmwinepapi.com",
+    "url": "https://palmwinepapi.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
+    "html-validate": "^7.18.0",
+    "lighthouse": "^11.0.0",
+    "gh-pages": "^6.0.0"
+  },
+  "dependencies": {
+    "intersection-observer": "^0.12.2"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not op_mini all"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidobaraumeh/palmwine-papi-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidobaraumeh/palmwine-papi-portfolio/issues"
+  },
+  "homepage": "https://palmwinepapi.com",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

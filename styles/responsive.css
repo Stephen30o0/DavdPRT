@@ -1,0 +1,694 @@
+/* ==========================================================================
+   Palmwine Papi - Responsive Styles
+   Nigerian Alte Aesthetic Portfolio
+   ========================================================================== */
+
+/* ==========================================================================
+   Tablet Landscape (1024px and down)
+   ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --section-padding: 6vh 4vw;
+  }
+
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .section-image {
+    height: 60vh;
+    transform: rotate(-1deg);
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .timeline-item:nth-child(even) {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    direction: ltr;
+    text-align: center;
+  }
+
+  .timeline-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .project-card.wide {
+    grid-column: span 1;
+  }
+
+  .project-card.breaking-grid,
+  .project-card.offset,
+  .project-card.tilted {
+    transform: none;
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .contact-image {
+    height: 50vh;
+    order: 2;
+  }
+
+  .contact-content {
+    order: 1;
+  }
+}
+
+/* ==========================================================================
+   Tablet Portrait (768px and down)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+  :root {
+    --section-padding: 4vh 5vw;
+    --spacing-xl: 4rem;
+    --spacing-lg: 2rem;
+  }
+
+  .main-nav {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .nav-content {
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 80px;
+  }
+
+  .hero-image-wrapper {
+    height: 40vh;
+  }
+
+  .palmwine-script {
+    font-size: clamp(3rem, 15vw, 8rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .section-title {
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-title.disrupted {
+    transform: rotate(-1deg);
+    margin-left: -1rem;
+  }
+
+  .about-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .section-image {
+    height: 50vh;
+    transform: none;
+  }
+
+  .floating-elements {
+    display: none;
+  }
+
+  .timeline-container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .timeline-item {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .timeline-content {
+    padding: var(--spacing-sm);
+  }
+
+  .timeline-content h3 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
+
+  .timeline-image {
+    height: 200px;
+    transform: none;
+    max-width: 300px;
+  }
+
+  .timeline-item::before {
+    font-size: 2rem;
+    top: -15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .project-card {
+    height: 300px;
+  }
+
+  .polaroid-frame,
+  .vinyl-frame,
+  .ticket-stub {
+    display: none;
+  }
+
+  .contact-section {
+    padding: var(--spacing-md);
+  }
+
+  .contact-image {
+    height: 40vh;
+  }
+
+  .handwritten-name {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    bottom: 15%;
+    left: 5%;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Mobile Landscape (640px and down)
+   ========================================================================== */
+
+@media screen and (max-width: 640px) {
+  :root {
+    --section-padding: 3vh 4vw;
+  }
+
+  .hero-section {
+    padding-top: 60px;
+  }
+
+  .hero-content {
+    padding: var(--spacing-md);
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero-cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .about-section,
+  .resume-section,
+  .projects-section,
+  .contact-section {
+    padding: var(--spacing-md);
+  }
+
+  .content-text p {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .timeline-content .description {
+    font-size: 0.9rem;
+  }
+
+  .project-card {
+    height: 250px;
+  }
+
+  .project-overlay h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .contact-text {
+    font-size: 1.1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ==========================================================================
+   Mobile Portrait (480px and down)
+   ========================================================================== */
+
+@media screen and (max-width: 480px) {
+  :root {
+    --section-padding: 2vh 4vw;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+  }
+
+  .main-nav {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .nav-toggle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .nav-link {
+    font-size: clamp(1.2rem, 8vw, 2.5rem);
+  }
+
+  .hero-section {
+    padding-top: 50px;
+    min-height: auto;
+  }
+
+  .hero-image-wrapper {
+    height: 35vh;
+  }
+
+  .palmwine-script {
+    font-size: clamp(2.5rem, 18vw, 6rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.2rem, 6vw, 1.8rem);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .hero-tagline {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .hero-cta {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .palmwine-watermark {
+    width: 150px;
+    height: 150px;
+    bottom: 5%;
+    left: 5%;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 12vw, 4rem);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .about-section,
+  .resume-section,
+  .projects-section,
+  .contact-section {
+    padding: var(--spacing-sm);
+  }
+
+  .section-image {
+    height: 40vh;
+  }
+
+  .section-content {
+    padding: var(--spacing-sm);
+  }
+
+  .content-text p:first-child {
+    font-size: 1.1rem;
+  }
+
+  .timeline-item {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .timeline-content .company {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .timeline-content .description {
+    font-size: 0.8rem;
+  }
+
+  .timeline-image {
+    height: 180px;
+    max-width: 250px;
+  }
+
+  .timeline-item::before {
+    font-size: 1.5rem;
+    top: -10px;
+  }
+
+  .project-card {
+    height: 220px;
+  }
+
+  .project-overlay {
+    padding: var(--spacing-sm);
+  }
+
+  .project-overlay h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .project-overlay p {
+    font-size: 0.8rem;
+  }
+
+  .contact-image {
+    height: 35vh;
+  }
+
+  .contact-content {
+    padding: var(--spacing-sm);
+  }
+
+  .contact-text {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .handwritten-name {
+    font-size: clamp(1.2rem, 6vw, 1.5rem);
+    bottom: 10%;
+  }
+
+  .form-group {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .submit-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .social-links {
+    gap: var(--spacing-xs);
+  }
+
+  .social-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* ==========================================================================
+   Extra Small Mobile (360px and down)
+   ========================================================================== */
+
+@media screen and (max-width: 360px) {
+  :root {
+    --section-padding: 1.5vh 3vw;
+  }
+
+  .hero-section {
+    padding-top: 40px;
+  }
+
+  .hero-image-wrapper {
+    height: 30vh;
+  }
+
+  .palmwine-script {
+    font-size: clamp(2rem, 20vw, 5rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 7vw, 1.5rem);
+  }
+
+  .hero-tagline {
+    font-size: 0.8rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 14vw, 3.5rem);
+  }
+
+  .section-image {
+    height: 35vh;
+  }
+
+  .timeline-image {
+    height: 160px;
+    max-width: 200px;
+  }
+
+  .project-card {
+    height: 200px;
+  }
+
+  .contact-image {
+    height: 30vh;
+  }
+
+  .handwritten-name {
+    font-size: 1rem;
+  }
+}
+
+/* ==========================================================================
+   Landscape Orientation Fixes
+   ========================================================================== */
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 60px;
+  }
+
+  .hero-image-wrapper {
+    height: 60vh;
+  }
+
+  .section-image,
+  .contact-image {
+    height: 70vh;
+  }
+
+  .about-section,
+  .contact-section {
+    min-height: auto;
+  }
+}
+
+/* ==========================================================================
+   High DPI Displays
+   ========================================================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .film-grain,
+  .texture-overlay,
+  .grain-overlay {
+    background-size: 50px 50px;
+  }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+  .main-nav,
+  .scroll-indicator,
+  .floating-elements,
+  .bg-elements,
+  .film-grain,
+  .texture-overlay,
+  .grain-overlay,
+  .neon-overlay {
+    display: none !important;
+  }
+
+  .hero-section,
+  .about-section,
+  .resume-section,
+  .projects-section,
+  .contact-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .section-title {
+    color: #333 !important;
+  }
+
+  .palmwine-script {
+    color: #666 !important;
+    text-shadow: none !important;
+  }
+}
+
+/* ==========================================================================
+   Accessibility Improvements
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-slow,
+  .parallax-medium,
+  .parallax-fast {
+    transform: none !important;
+  }
+
+  .scroll-reveal,
+  .scroll-reveal-left,
+  .scroll-reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .floating-elements,
+  .alte-texture {
+    animation: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --primary: #FF0000;
+    --accent: #FFFF00;
+    --muted: #CCCCCC;
+  }
+
+  .hero-cta,
+  .submit-btn {
+    border: 3px solid currentColor;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    border: 2px solid var(--white);
+  }
+}
+
+/* ==========================================================================
+   Dark Mode Preferences
+   ========================================================================== */
+
+@media (prefers-color-scheme: light) {
+  /* Keep dark theme regardless of system preference for aesthetic consistency */
+  /* This maintains the Alte aesthetic which requires the dark, gritty feel */
+}
+
+/* ==========================================================================
+   Container Queries (Future-proof)
+   ========================================================================== */
+
+@container (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Touch Device Optimizations
+   ========================================================================== */
+
+@media (hover: none) and (pointer: coarse) {
+  .nav-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .hero-cta,
+  .submit-btn,
+  .social-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-overlay {
+    opacity: 1;
+    background: rgba(30, 30, 30, 0.8);
+  }
+
+  .tilt-hover:hover,
+  .zoom-hover:hover {
+    transform: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+}
