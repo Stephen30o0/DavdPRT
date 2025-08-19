@@ -6,11 +6,12 @@
   "scripts": {
     "start": "live-server --port=3000 --open=/",
     "dev": "live-server --port=3000 --open=/ --watch=styles,js",
-    "build": "npm run create-dirs && npm run optimize-images && npm run minify-css && npm run minify-js",
+    "build": "npm run create-dirs && npm run optimize-images && npm run minify-css && npm run minify-js && npm run copy-html",
     "create-dirs": "node -e \"const fs = require('fs'); ['dist/js', 'dist/styles', 'dist/assets/images'].forEach(dir => fs.mkdirSync(dir, {recursive: true}))\"",
     "optimize-images": "imagemin assets/images/*.{jpg,png,gif} --out-dir=dist/assets/images",
     "minify-css": "cleancss -o dist/styles/main.min.css styles/*.css",
     "minify-js": "uglifyjs js/*.js -o dist/js/main.min.js",
+    "copy-html": "node build-html.js",
     "serve": "python -m http.server 3000",
     "lint": "eslint js/**/*.js",
     "format": "prettier --write \"**/*.{html,css,js,md}\"",
